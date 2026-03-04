@@ -1,0 +1,13 @@
+id: 5a07009d-5c54-4e58-aa9c-896211a6d633
+name: waitlist-engine
+description: React + TypeScript + Vite
+tier: prototype
+lane: oss
+priority: medium
+oss: false
+stack: [typescript, react, convex, tailwind, vite]
+repo: "https://github.com/mxn2020/waitlist-engine"
+deploy_url: null
+last_active: 2026-02-24
+tags: []
+notes: 

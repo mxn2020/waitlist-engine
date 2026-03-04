@@ -1,5 +1,7 @@
 import { Rocket, ArrowRight, ShieldCheck, Zap } from "lucide-react";
 import ThemeToggle from "../components/ThemeToggle";
+import { Button, Input } from "@geenius-ui/react-css";
+
 export default function PublicStatusPage() {
     return (<div style={{ minHeight: "100vh", background: "radial-gradient(circle at top center, var(--color-bg-secondary) 0%, var(--color-bg-primary) 100%)", display: "flex", flexDirection: "column" }}>
         <header style={{ padding: "var(--space-6)", display: "flex", justifyContent: "space-between", alignItems: "center", maxWidth: 1200, margin: "0 auto", width: "100%" }}>
@@ -23,8 +25,8 @@ export default function PublicStatusPage() {
             </p>
 
             <form style={{ display: "flex", gap: "var(--space-3)", width: "100%", maxWidth: 500, marginBottom: "var(--space-8)" }} onSubmit={e => { e.preventDefault(); }}>
-                <input type="email" placeholder="Enter your email address" className="input" required style={{ flex: 1, boxShadow: "0 10px 25px -5px rgba(0,0,0,0.3)" }} />
-                <button type="submit" className="btn btn-primary" style={{ padding: "0 32px" }}>Join <ArrowRight size={18} /></button>
+                <Input type="email" placeholder="Enter your email address" required style={{ flex: 1, boxShadow: "0 10px 25px -5px rgba(0,0,0,0.3)" }} />
+                <Button type="submit" variant="primary" style={{ padding: "0 32px" }}>Join <ArrowRight size={18} /></Button>
             </form>
 
             <div style={{ display: "flex", gap: "var(--space-6)", color: "var(--color-text-secondary)", fontSize: "14px", fontWeight: 600 }}>

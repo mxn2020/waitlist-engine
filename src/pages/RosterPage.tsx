@@ -1,26 +1,29 @@
 import { Users, Search, Download, Mail, Trophy } from "lucide-react";
+import { Button, Card, Input } from "@geenius-ui/react-css";
+
 const signups = [
     { id: "1", email: "mehdi@openclaw.dev", referrals: 42, position: 1, date: "Oct 20, 2026", source: "Twitter" },
     { id: "2", email: "ceo@startup.io", referrals: 28, position: 2, date: "Oct 21, 2026", source: "Direct" },
     { id: "3", email: "early.adopter@gmail.com", referrals: 15, position: 3, date: "Oct 22, 2026", source: "Newsletter" },
     { id: "4", email: "sarah@example.com", referrals: 0, position: 14235, date: "Today", source: "Organic Search" }
 ];
+
 export default function RosterPage() {
     return (<div style={{ padding: "var(--space-8)", maxWidth: 1200 }}>
         <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "var(--space-6)" }}>
             <h1 style={{ fontSize: "var(--font-size-2xl)", fontWeight: 800, display: "flex", alignItems: "center", gap: "var(--space-2)" }}><Users style={{ color: "var(--color-accent-primary)" }} /> Waitlist Roster</h1>
             <div style={{ display: "flex", gap: "var(--space-2)" }}>
-                <button className="btn"><Download size={16} /> Export CSV</button>
-                <button className="btn btn-primary"><Mail size={16} /> Email Top 100</button>
+                <Button variant="outline" icon={<Download size={16} />}>Export CSV</Button>
+                <Button variant="primary" icon={<Mail size={16} />}>Email Top 100</Button>
             </div>
         </div>
 
-        <div className="card" style={{ padding: "var(--space-2)", marginBottom: "var(--space-6)", display: "flex", alignItems: "center", gap: "var(--space-2)", borderRadius: "var(--radius-full)" }}>
+        <Card padding="sm" style={{ marginBottom: "var(--space-6)", display: "flex", alignItems: "center", gap: "var(--space-2)", borderRadius: "var(--radius-full)" }}>
             <Search size={18} style={{ color: "var(--color-text-tertiary)", marginLeft: "var(--space-3)" }} />
-            <input type="text" placeholder="Search by email..." style={{ border: "none", background: "transparent", width: "100%", padding: "8px 16px", outline: "none", fontSize: "14px" }} />
-        </div>
+            <Input placeholder="Search by email..." style={{ border: "none", background: "transparent", width: "100%", padding: "8px 16px", outline: "none", fontSize: "14px", boxShadow: "none" }} />
+        </Card>
 
-        <div className="card">
+        <Card padding="none">
             <table style={{ width: "100%", borderCollapse: "collapse" }}>
                 <thead>
                     <tr style={{ borderBottom: "1px solid var(--color-border)", background: "var(--color-bg-secondary)" }}>
@@ -46,6 +49,6 @@ export default function RosterPage() {
                     </tr>))}
                 </tbody>
             </table>
-        </div>
+        </Card>
     </div>);
 }
