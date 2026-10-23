@@ -44,7 +44,7 @@
   },
   "description": "Waitlist management with invite codes and analytics",
   "author": "Mehdi Nabhani",
-  "license": "MIT",
+  "license": "Apache-2.0",
   "keywords": [
     "waitlist",
     "engine",
